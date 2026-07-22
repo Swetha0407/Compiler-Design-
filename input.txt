@@ -1,0 +1,10 @@
+// Sample Program
+
+int a = 10;
+int b = 20;
+
+/* Addition of two numbers */
+
+c = a + b;
+d = a * 5;
+e = b - 2;

@@ -1,0 +1,8 @@
+// Sample Program
+
+int a = 10;
+
+/* Multi-line
+   comment */
+
+a = a + 5;
