@@ -2,7 +2,7 @@
 #include<ctype.h>
 #include<string.h>
 int main() {
-    FILE *fp=fopen("input.txt","r");
+    FILE *fp=fopen("inputexp1.txt","r");
     char ch,s[50],p;
     int i;
     while((ch=fgetc(fp))!=EOF) {
