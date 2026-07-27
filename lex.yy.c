@@ -296,8 +296,8 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    3,    3,    3,
-        3,    3,    3,    4,    4,    4,    4,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    3,    4,    5,    6,
+        7,    7,    7,    7,    7,    7,    7,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -322,37 +322,39 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst int yy_meta[5] =
+static yyconst int yy_meta[8] =
     {   0,
-        1,    2,    1,    1
+        1,    2,    1,    1,    1,    1,    1
     } ;
 
-static yyconst short int yy_base[28] =
+static yyconst short int yy_base[24] =
     {   0,
-        0,    0,   24,    0,   25,   22,    0,   21,   20,   19,
-       18,   17,   16,   15,   14,    0,   25,   13,   12,   11,
-       10,    9,    8,    7,    6,    5,    4
+        0,    0,   30,    0,   31,    7,    0,   26,    7,   12,
+       25,   11,   17,   20,   23,    0,   31,   26,   24,   21,
+       18,   13,    8
     } ;
 
-static yyconst short int yy_def[28] =
+static yyconst short int yy_def[24] =
     {   0,
-       17,    1,   17,   18,   17,   19,   18,   20,   21,   22,
-       23,   24,   25,   26,   27,   18,    0,   17,   17,   17,
-       17,   17,   17,   17,   17,   17,   17
+       17,    1,   17,   18,   17,   19,   18,   18,   18,   20,
+       18,   18,   21,   22,   23,   18,    0,   17,   17,   17,
+       17,   17,   17
     } ;
 
-static yyconst short int yy_nxt[30] =
+static yyconst short int yy_nxt[39] =
     {   0,
-        4,    5,    4,    6,   16,   15,   14,   13,   12,   11,
-       10,    9,    8,    7,    7,    7,    7,    7,    7,    7,
-        7,    7,    7,   17,    3,   17,   17,   17,   17
+        4,    5,    4,    6,    6,    6,    6,    7,   16,    7,
+       10,   10,    7,   15,    7,   13,   13,    7,   14,    7,
+        7,   11,    7,    7,    8,    7,    7,   12,    9,   17,
+        3,   17,   17,   17,   17,   17,   17,   17
     } ;
 
-static yyconst short int yy_chk[30] =
+static yyconst short int yy_chk[39] =
     {   0,
-        1,    1,    1,    1,   27,   26,   25,   24,   23,   22,
-       21,   20,   19,   18,   15,   14,   13,   12,   11,   10,
-        9,    8,    6,    3,   17,   17,   17,   17,   17
+        1,    1,    1,    1,    1,    1,    1,    6,   23,    6,
+        9,    9,   10,   22,   10,   12,   12,   13,   21,   13,
+       14,   20,   14,   15,   19,   15,   18,   11,    8,    3,
+       17,   17,   17,   17,   17,   17,   17,   17
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -366,10 +368,11 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "mobile.l"
+#line 1 "dobvalid.l"
 #define INITIAL 0
-#line 2 "mobile.l"
-#line 373 "lex.yy.c"
+#line 2 "dobvalid.l"
+#include<stdio.h>
+#line 376 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -520,10 +523,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 4 "mobile.l"
+#line 5 "dobvalid.l"
 
 
-#line 527 "lex.yy.c"
+#line 530 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -580,7 +583,7 @@ yy_match:
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 25 );
+		while ( yy_base[yy_current_state] != 31 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -608,20 +611,20 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 6 "mobile.l"
-{printf("\n mobile number valid\n");}
+#line 7 "dobvalid.l"
+{ printf("valid");}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 7 "mobile.l"
-{printf("\n mobile number invalid\n");}
+#line 8 "dobvalid.l"
+{ printf("invalid");}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 9 "mobile.l"
+#line 9 "dobvalid.l"
 ECHO;
 	YY_BREAK
-#line 625 "lex.yy.c"
+#line 628 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1507,15 +1510,12 @@ int main()
 	return 0;
 	}
 #endif
-#line 9 "mobile.l"
+#line 9 "dobvalid.l"
 
-int yywrap(void){}
+
+int yywrap(){}
 
 int main()
 {
-printf("\n enter the mobile number:");
 yylex();
-printf("\n");
-return 0;
 }
-
