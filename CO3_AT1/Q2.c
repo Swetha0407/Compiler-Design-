@@ -1,40 +1,25 @@
 #include <stdio.h>
 #include <ctype.h>
-
 int stack[100];
 int top = -1;
-
-void push(int x)
-{
+void push(int x) {
     stack[++top] = x;
 }
-
-int pop()
-{
+int pop() {
     return stack[top--];
 }
-
-int main()
-{
+int main() {
     char postfix[100];
     int i, op1, op2;
-
     printf("Enter postfix expression: ");
     scanf("%s", postfix);
-
-    for(i = 0; postfix[i] != '\0'; i++)
-    {
+    for(i = 0; postfix[i] != '\0'; i++) {
         if(isdigit(postfix[i]))
-        {
             push(postfix[i] - '0');
-        }
-        else
-        {
+        else {
             op2 = pop();
             op1 = pop();
-
-            switch(postfix[i])
-            {
+            switch(postfix[i]) {
                 case '+': push(op1 + op2); break;
                 case '-': push(op1 - op2); break;
                 case '*': push(op1 * op2); break;
@@ -42,8 +27,6 @@ int main()
             }
         }
     }
-
     printf("Result = %d", pop());
-
     return 0;
 }
