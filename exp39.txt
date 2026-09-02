@@ -1,0 +1,2 @@
+The cat is sleeping.
+The cat is small.
